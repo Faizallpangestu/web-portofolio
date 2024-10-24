@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a3636;
+            display: flex;
+            flex-direction: column; /* Maintain column layout */
+            align-items: center; /* Center align content */
+        }
+
+        .header {
+            background-color: #677d6a;
+            padding: 15px 30px; /* Increased padding for header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 400;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px; /* Slightly adjusted font size */
+            color: #d6bd98;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px; /* Reduced gap for mobile */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px; /* Adjusted font size for better mobile view */
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
+            padding: 8px 12px; /* Padding for better touch targets */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .nav a:hover {
+            background-color: #f0a500;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .nav a.active {
+            border-radius: 5px;
+            color: #000;
+        }
+
+        .container {
+            background-color: #143F44;
+            padding: 40px;
+            border-radius: 10px;
+            width: 90%; /* Use percentage width for responsiveness */
+            max-width: 600px; /* Limit maximum width */
+            margin-top: 120px; /* Increased margin to fit header and ensure visibility */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            color: #F0C987;
+            font-size: 28px; /* Slightly adjusted font size */
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+            margin-bottom: 8px;
+            font-weight: bold; /* Bold labels */
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: none; /* Prevent resizing */
+        }
+
+        .submit-btn {
+            background-color: #F0C987;
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .submit-btn:hover {
+            background-color: #e3b86e;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column; /* Stack header elements */
+                align-items: center; /* Center align header elements */
+            }
+            .nav {
+                flex-direction: row; /* Maintain row layout */
+                gap: 10px; /* Adjust gap for smaller screens */
+            }
+            .container {
+                margin-top: 120px; /* Adjusted for mobile */
+                padding: 20px; /* Reduced padding for mobile */
+                width: 95%; /* Wider on small screens */
+            }
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert("Terima kasih sudah melihat portofolio saya!"); // Alert message
+            window.location.href = "https://wa.me/6285712134756"; // Redirect to WhatsApp (replace with your WhatsApp number)
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>MUHAMMAD FAIZAL</h1>
+        <div class="nav">
+            <a href="Home.html">Home</a>
+            <a href="Aboutme.html">About Me</a>
+            <a href="skill.html">Skills</a>
+            <a href="Project.html">Project</a>
+            <a href="Certificate.html">Certificate</a>
+            <a href="contact.html" class="active">Contact</a> <!-- Added active class for current page -->
+        </div>
+    </div>
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

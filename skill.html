@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Muhammad Faizal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a3636;
+            color: #fff;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        /* Navbar Styles */
+        .header {
+            background-color: #677d6a;
+            padding: 10px 20px; /* Adjusted padding for better spacing */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out; /* Fade in animation */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d6bd98;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            line-height: 1.6;
+            color: white; /* Text color matching the color scheme */
+            font-style: italic;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease; /* Transition for scale effect */
+        }
+
+        h2:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Include transform in transition */
+        }
+
+        .nav a:hover {
+            transform: scale(1.1); /* Scale effect on hover */
+            background-color: #f0a500; /* Background color change */
+        }
+
+        /* Skills Section */
+        .skills-title {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 28px;
+            animation: fadeIn 1.5s ease-in-out; /* Fade in animation */
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            place-items: center;
+            padding: 0 20px;
+            margin-bottom: 40px;
+            animation: fadeInUp 2s ease-in-out; /* Fade in up animation */
+        }
+
+        .skill {
+            text-align: center;
+            max-width: 150px;
+            transition: transform 0.3s ease; /* Transition for scale animation */
+        }
+
+        .skill:hover {
+            transform: scale(1.1); /* Hover scale effect */
+        }
+
+        .skill img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 100px; /* Set max height */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease; /* Transition for image */
+        }
+
+        .skill img:hover {
+            transform: rotate(5deg); /* Slight rotation on hover */
+        }
+
+        .skill p {
+            background-color: #d3d3d3;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+            transition: transform 0.3s ease; /* Transition for text scale effect */
+        }
+
+        .skill p:hover {
+            transform: scale(1.1); /* Scale effect on text hover */
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column; /* Stack header items on small screens */
+                align-items: center;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid for mobile */
+            }
+
+            h2 {
+                font-size: 18px; /* Adjust font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>MUHAMMAD FAIZAL</h1>
+        <div class="nav">
+            <a href="Home.html" class="nav-link">Home</a>
+            <a href="Aboutme.html" class="nav-link">About Me</a>
+            <a href="skill.html" class="nav-link active">Skills</a>
+            <a href="Project.html" class="nav-link">Projects</a>
+            <a href="Certificate.html" class="nav-link">Certificates</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </div>
+
+    <div class="skills-title" id="skills">SKILLS</div>
+
+    <div class="skills-container">
+        <div class="skill">
+            <img src="html5.jpg" alt="HTML5 logo">
+            <p>HTML</p>
+        </div>
+        <div class="skill">
+            <img src="css.jpg" alt="CSS3 logo">
+            <p>CSS</p>
+        </div>
+        <div class="skill">
+            <img src="js.jpg" alt="JavaScript logo">
+            <p>JavaScript</p>
+        </div>
+        <div class="skill">
+            <img src="mysql.jpg" alt="MySQL logo">
+            <p>MySQL</p>
+        </div>
+        <div class="skill">
+            <img src="figma.jpg" alt="Figma logo">
+            <p>Figma</p>
+        </div>
+        <div class="skill">
+            <img src="php.jpg" alt="PHP logo">
+            <p>PHP</p>
+        </div>
+    </div>
+
+    <h2>
+        "Above are some of the skills that I understand, and for now I am still learning the skills above so that I can adapt quickly
+        to the conditions of problems in the field and with the team as well. Currently, I am also studying at Pelita Bangsa University."
+    </h2>
+
+</body>
+</html>

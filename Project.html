@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #1a3636;
+            overflow-y: auto;
+            scroll-behavior: smooth; /* Smooth scroll for anchor links */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #677d6a; /* Sama dengan navbar */
+            padding: 2px 5px;
+            display: flex;
+            align-items: center;  /* Center align items vertically */
+            justify-content: space-between; /* Space between title and navbar */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #d6bd98;
+            transition: transform 0.3s; /* Animation for h1 on hover */
+        }
+
+        /* Navbar Styles */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #677d6a; /* Sama dengan header */
+            padding: 10px 0;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            padding: 10px 15px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .nav a.active {
+            border-radius: 5px;
+            color: black;
+        }
+
+        .nav a:hover {
+            background-color: #f0a500;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav a {
+                margin: 10px 0;
+            }
+        }
+
+        /* Content Styles */
+        .content {
+            text-align: center;
+            padding: 20px;
+            background-color: #2A4B5B;
+            flex-wrap: wrap;
+        }
+
+        .content h2 {
+            color: white; /* Mengubah warna tulisan "Project" menjadi putih */
+            font-size: 24px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .project {
+            width: 30%;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 0.3s;
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project-title {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .description {
+            background-color: #A3B18A;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            color: #000;
+        }
+
+        .description ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>MUHAMMAD FAIZAL</h1>
+        <div class="nav">
+            <a href="Home.html" id="homeLink">Home</a>
+            <a href="Aboutme.html" id="aboutLink">About Me</a>
+            <a href="skill.html" id="skillsLink">Skills</a>
+            <a href="Project.html" id="projectLink" class="active">Project</a>
+            <a href="Certificate.html" id="certificateLink">Certificate</a>
+            <a href="contact.html" id="contactLink">Contact</a>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Project</h2>
+        <div class="projects">
+            <div class="project">
+                <img alt="Food Apps With Figma" height="600" src="food appss.JPG" width="150"/>
+                <div class="project-title">Food Apps With Figma</div>
+            </div>
+            <div class="project">
+                <img alt="Web E-Commerce" height="300" src="web programing.JPG" width="100"/>
+                <div class="project-title">Web E-Commerce</div>
+            </div>
+            <div class="project">
+                <img alt="E-Commerce Apps" height="600" src="ecomerce apps.JPG" width="150"/>
+                <div class="project-title">E-Commerce Apps</div>
+            </div>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Food Apps with Figma di design sebagai solusi bagi para pencinta kuliner yang ingin mendukung pengusaha lokal sekaligus menikmati hidangan terbaik di sekitar mereka.</li>
+                <li>Web e-commerce dengan program (HTML, CSS, JS) membuat fitur-fitur inovatif, E-commerce hadir sebagai destinasi utama bagi anak muda yang ingin tetap fashionable dan up-to-date dengan tren fashion terbaru.</li>
+                <li>E-commerce Apps with Figma bertujuan sama di design dengan baik supaya pengguna dapat lebih mudah memahami fitur yang ada di dalamnya.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Highlight the active link based on the current URL
+        const currentLocation = window.location.href;
+        const navLinks = document.querySelectorAll('.nav a');
+
+        navLinks.forEach(link => {
+            if (link.href === currentLocation) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

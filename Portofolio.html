@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Faizal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a3636;
+            color: #F5E6CC;
+            overflow-y: auto; /* Enable vertical scrolling */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        .header {
+            background-color: #677d6a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; /* Keep header at the top */
+            top: 0;
+            z-index: 1000; /* Ensure the header is above other content */
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Hover transition */
+        }
+        .nav a:hover {
+            background-color: #f0a500;
+            color: #000;
+            transform: scale(1.1); /* Scale effect on hover */
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+        .intro {
+            max-width: 50%;
+            text-align: center;
+        }
+        .intro h2 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .intro h2 span {
+            color: #D4A373;
+        }
+        .intro p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .social-icons {
+            margin: 20px 0;
+        }
+        .social-icons i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: black;
+        }
+        .button {
+            background-color: #D4A373;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s; /* Scale on hover */
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .profile-card {
+            background-color: #A3B18A;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .profile-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .profile-card p {
+            margin: 10px 0 0;
+            font-size: 18px;
+            color: #0A3D3F;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center; /* Center content on small screens */
+                padding: 20px; /* Reduce padding */
+            }
+            .intro, .profile-card {
+                max-width: 100%; /* Full width on mobile */
+                text-align: center; /* Center text */
+            }
+            .intro h2 {
+                font-size: 28px; /* Adjust font size for mobile */
+            }
+            .intro p {
+                font-size: 20px; /* Adjust font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>MUHAMMAD FAIZAL</h1>
+        <div class="nav">
+            <a href="Home.html">Home</a>
+            <a href="Aboutme.html">About Me</a>
+            <a href="skill.html">Skills</a>
+            <a href="Project.html">Projects</a>
+            <a href="Certificate.html">Certificates</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="intro">
+            <h2>Hii, I am <span>Muhammad Faizal</span></h2>
+            <p>UI/UX Designer &amp; <span>Front End Developer</span></p>
+            <div class="social-icons">
+                <i class="fab fa-instagram" onclick="window.open('https://www.instagram.com/faizallpangestu', '_blank');"></i>
+                <i class="fab fa-linkedin" onclick="window.open('https://www.linkedin.com/in/muhammad-faizal-3339a52ba', '_blank');"></i>
+                <i class="fab fa-facebook" onclick="window.open('https://www.facebook.com/FaizallPangestu', '_blank');"></i>
+                <i class="fab fa-tiktok" onclick="window.open('https://www.tiktok.com/@muhammadfaizalpangestu', '_blank');"></i>
+            </div>
+            <button class="button" id="clickButton">Click</button>
+        </div>
+
+        <div class="profile-card">
+            <img src="faizal.jpg" alt="faizalpangestu."/>
+            <p>UI/UX Designer &amp;<br/>Front End Developer<br/>Universitas Pelita Bangsa</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function() {
+            alert('Hello, welcome to Muhammad Faizal\'s website!');
+            window.location.href = 'Aboutme.html'; // Redirect to About Me page after alert
+        });
+    </script>
+    
+</body>
+</html>
